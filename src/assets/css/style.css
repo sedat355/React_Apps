@@ -21,7 +21,7 @@ button {
   color: white;
   border-radius: 4px;
   border: 1px solid slategray;
-  font-weight: bold;
+  font-weight: 500;
 }
 input {
   outline: none;

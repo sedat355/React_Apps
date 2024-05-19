@@ -1,6 +1,9 @@
 const CarValue = () => {
   return (
-    <div>CarValue</div>
+    <div>
+      <span>Total Value: <strong>&#36;{22500}</strong></span>
+
+    </div>
   )
 }
 

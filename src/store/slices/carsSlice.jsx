@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from 'nanoid'
 
 const initialState = [
-  {id: nanoid(), name: 'Audi', value: 8000 },
-  {id: nanoid(), name: 'Toyota', value: 18000 },
-  {id: nanoid(), name: 'Ford', value: 12000 },
+  {id: nanoid(), name: 'Audi A5', value: 8000 },
+  {id: nanoid(), name: 'Toyota Corolla', value: 18000 },
+  {id: nanoid(), name: 'Ford Mondeo', value: 12000 },
 ]
 
 const carsSlice = createSlice({
