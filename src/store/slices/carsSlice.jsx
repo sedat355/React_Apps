@@ -11,12 +11,17 @@ const carsSlice = createSlice({
   name: 'car',
   initialState,
   reducers: {
-    addCar: (state,action) => {
+    addCar: (state, action) => {
       const newCar = action.payload
       state.push(newCar)
-    }
+    },
+    deleteCar: (state, action) => {
+      const index = state.findIndex(car => car.id === action.payload)
+      state.splice(index,1)//veya filter ile:
+      //return state.filter(car => car.id !== action.payload)
+    },
   }
 });
 
 export const carsReducer = carsSlice.reducer
-export const { addCar } = carsSlice.actions
+export const { addCar, deleteCar } = carsSlice.actions

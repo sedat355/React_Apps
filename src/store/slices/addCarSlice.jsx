@@ -7,11 +7,11 @@ const carSlice = createSlice({
   reducers: {
     handleCarName: (state, action) => {
       state.name = action.payload;
-      return state;
+      // return state;
     },
     handleCarValue: (state, action) => {
       state.value = action.payload;
-      return state;
+      // return state;
     }
   }
 });

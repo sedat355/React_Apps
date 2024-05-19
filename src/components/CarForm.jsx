@@ -29,11 +29,11 @@ const CarForm = () => {
     >
       <div className="flex flex-col">
         <span>Car Name:</span>
-        <input value={car.name} name="name" onChange={handleName} />
+        <input value={car.name} onChange={handleName} />
       </div>
       <div className="flex flex-col">
         <span>Car Value:</span>
-        <input value={car.value} name="value" onChange={handleValue} />
+        <input value={car.value} onChange={handleValue} />
       </div>
 
       <button 
