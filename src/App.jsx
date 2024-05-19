@@ -7,7 +7,7 @@ import CarValue from './components/CarValue'
 function App() {
   return(
     <div>
-      <h1>Car Apps</h1>
+      <h1 className="text-center mb-4">Car Apps</h1>
       <CarForm/>
       <CarSearch/>
       <CarList/>

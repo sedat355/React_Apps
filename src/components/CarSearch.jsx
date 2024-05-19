@@ -1,6 +1,11 @@
 const CarSearch = () => {
   return (
-    <div>CarSearch</div>
+    <div className="mb-4">
+      <input 
+        className="w-full" 
+        placeholder="Search..."
+      />
+    </div>
   )
 }
 
