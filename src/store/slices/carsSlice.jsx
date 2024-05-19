@@ -12,7 +12,8 @@ const carsSlice = createSlice({
   initialState,
   reducers: {
     addCar: (state,action) => {
-      state.push(action.payload)
+      const newCar = action.payload
+      state.push(newCar)
     }
   }
 });

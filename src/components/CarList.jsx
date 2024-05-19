@@ -8,7 +8,8 @@ const CarList = () => {
   const renderedCars = cars.map(car => {
     return(
       <li key={car.id} className="flex gap-x-1 items-center justify-between border rounded border-zinc-600 p-1">
-        <span>{car.name}</span>
+        <span className="">{car.name}</span>
+        <span className="ml-auto mr-8">&#36;{car.value}</span>
         <button>Delete</button>
       </li>
     )
