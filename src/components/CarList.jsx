@@ -9,7 +9,7 @@ const CarList = () => {
 
   const renderedCars = state.cars.map(car => {
     const isMatchedName = searchName !== '' && car.name.toLowerCase().includes(searchName.toLowerCase());
-    
+
     const isMatchedSearch = car.name.toLowerCase().includes(state.searchTerm.toLowerCase());
     if(isMatchedSearch) {
       return(

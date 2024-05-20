@@ -10,10 +10,14 @@ const CarValue = () => {
     }
   })
 
+  const totalValue = cars.reduce((total,currCar) => {
+    return total += currCar.value
+  },0)
+
   return (
     <div>
       <span>
-        Total Value: <strong>&#36;{22500}</strong>
+        Total Value: <strong>&#36;{totalValue}</strong>
       </span>
       {isMatchedName && (
         <div className="absolute  text-wrap p-2 bg-red-600 font-bold text-white">
