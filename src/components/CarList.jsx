@@ -2,21 +2,22 @@ import { useDispatch, useSelector } from "react-redux"
 import { deleteCar } from "../store/slices/carsSlice";
 
 const CarList = () => {
-  const cars = useSelector(state => state.cars);
+  const state = useSelector(state => state.cars);
   const dispatch = useDispatch()
 
-  console.log(cars)
 
-  const renderedCars = cars.map(car => {
-    return(
-      <li key={car.id} className="flex gap-x-1 items-center justify-between border rounded border-zinc-600 p-1">
-        <span className="">{car.name}</span>
-        <span className="ml-auto mr-8">&#36;{car.value}</span>
-        <button
-          onClick={() => dispatch(deleteCar(car.id))}
-        >Delete</button>
-      </li>
-    )
+  const renderedCars = state.cars.map(car => {
+    if(car.name.toLowerCase().includes(state.searchTerm.toLowerCase())) {
+      return(
+        <li key={car.id} className="flex gap-x-1 items-center justify-between border rounded border-zinc-600 p-1">
+          <span className="">{car.name}</span>
+          <span className="ml-auto mr-8">&#36;{car.value}</span>
+          <button
+            onClick={() => dispatch(deleteCar(car.id))}
+          >Delete</button>
+        </li>
+      )
+    }
   })
 
   return (
