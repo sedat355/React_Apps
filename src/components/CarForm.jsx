@@ -39,7 +39,7 @@ const CarForm = () => {
       </div>
 
       <button 
-        className="self-end" 
+        className="self-end w-full" 
         type="submit"
       >
         Submit
