@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { handleCarName, handleCarValue } from "../store/slices/addCarSlice"
-import { addCar } from "../store/slices/carsSlice"
+import { addCar, handleSearchName } from "../store/slices/carsSlice"
 
 const CarForm = () => {
   const car = useSelector(state => state.car)
@@ -10,6 +10,7 @@ const CarForm = () => {
 
   const handleName = e => {
     dispatch(handleCarName(e.target.value))
+    dispatch(handleSearchName(e.target.value))
   }
 
   const handleValue = e => {

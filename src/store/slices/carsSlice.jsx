@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { nanoid } from 'nanoid'
 
 const initialState = {
+  searchName: '',
   searchTerm: '',
   cars: [
     {id: nanoid(), name: 'Audi A5', value: 8000 },
@@ -25,9 +26,12 @@ const carsSlice = createSlice({
     },
     handleSearch: (state, action) => {
       state.searchTerm = action.payload
+    },
+    handleSearchName: (state, action) => {
+      state.searchName = action.payload
     }
   }
 });
 
 export const carsReducer = carsSlice.reducer
-export const { addCar, deleteCar, handleSearch } = carsSlice.actions
+export const { addCar, deleteCar, handleSearch, handleSearchName } = carsSlice.actions
