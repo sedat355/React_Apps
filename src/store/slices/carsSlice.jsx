@@ -19,9 +19,19 @@ const carsSlice = createSlice({
       state.cars.push({id: nanoid(), ...action.payload})
     },
     deleteCar: (state, action) => {
-      const index = state.cars.findIndex(car => car.id === action.payload)
-      state.cars.splice(index,1)//veya filter ile:
-      //return state.filter(car => car.id !== action.payload)
+      // 1.yol:
+      // const index = state.cars.findIndex(car => car.id === action.payload)
+      // state.cars.splice(index,1)
+      
+      // 2.yol:
+      // const newCars = state.cars.filter(car => car.id !== action.payload)
+      // state.cars = newCars
+
+      //3.yol:
+      return  {...state, cars: state.cars.filter(car => car.id !== action.payload)}
+
+      //Yanlış yol:
+      //return  state.cars.filter(car => car.id !== action.payload)
     },
     handleSearch: (state, action) => {
       state.searchTerm = action.payload
