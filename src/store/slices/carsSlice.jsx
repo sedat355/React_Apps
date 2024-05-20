@@ -16,8 +16,7 @@ const carsSlice = createSlice({
   initialState,
   reducers: {
     addCar: (state, action) => {
-      const newCar = action.payload
-      state.cars.push(newCar)
+      state.cars.push({id: nanoid(), ...action.payload})
     },
     deleteCar: (state, action) => {
       const index = state.cars.findIndex(car => car.id === action.payload)

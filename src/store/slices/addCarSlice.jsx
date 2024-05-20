@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { nanoid } from "nanoid";
 
 const carSlice = createSlice({
   name: 'car',
-  initialState: {id: nanoid(), name: '', value: ''},
+  initialState: {name: '', value: ''},
   reducers: {
     handleCarName: (state, action) => {
       state.name = action.payload;
